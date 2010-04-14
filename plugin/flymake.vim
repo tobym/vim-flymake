@@ -44,6 +44,8 @@ endfunction
 
 
 function! FlyMakeCloseWindows()
+  execute 'match none'
+
   let bufs = ['*FlyMakeError*', '*FlyMakeWarn*']
   for buf in bufs
     if bufexists(buf)
